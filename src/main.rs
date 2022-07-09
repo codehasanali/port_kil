@@ -116,6 +116,7 @@ fn kill_process_by_arg(args: &Vec<String>) -> Vec<Result<String, String>> {
 }
 
 fn main() {
+    let args: Vec<String> = env::args().collect();
     let app = App::new("kil_port")
     .author("Hasan ALi Arıkan")
         .usage("kill_port 3000 4000 nc  # to kill processes by PID or name :1234 :7777   # to kill processes by port number               # run interactively")
